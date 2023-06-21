@@ -3,6 +3,9 @@ const router = express.Router();
 const auth = require("../middleware/AuthMWPermission");
 const { User } = require("../models/UserModelDB");
 
+// auth -> authorization
+// update user role to admin
+
 router.put("/:id", auth, async (req, res) => {
     try{
     // remember that findByIdAndUpdate() no longer accepts a callback

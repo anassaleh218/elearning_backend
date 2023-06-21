@@ -5,7 +5,7 @@ const router = express.Router();
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
-// Regestration
+// Logging in (Authentication)
 router.post("/", Validator, async (req, res) => {
   try {
     // check if already exist

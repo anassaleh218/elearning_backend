@@ -1,6 +1,5 @@
 const Student = require("../models/StudentsModelDB");
 
-
 // createStudent
 // if id already exist still loading in postman
 let addStudent = (req, res) => {
@@ -57,10 +56,10 @@ let getStudentByID = async (req, res) => {
 };
 
 // updateStudentByID
-// important to pointer to _id field  
+// important to pointer to _id field
 let updateStudentByID = async (req, res) => {
   try {
-    let std = await Student.findOneAndUpdate({_id:req.params.id}, req.body, {
+    let std = await Student.findOneAndUpdate({ _id: req.params.id }, req.body, {
       returnOriginal: false,
     });
     if (std) {

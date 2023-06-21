@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 //conn to db
 mongoose
-  .connect("mongodb://localhost:27017/iti", {
+  .connect("mongodb://localhost:27017/elearning", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
    

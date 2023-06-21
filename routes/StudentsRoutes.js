@@ -1,9 +1,11 @@
 const studentsController = require("../controllers/StudentControllerDB");
 const stdValidator = require("../middleware/StudentValidatorMW");
+const auth = require("../middleware/AuthMWPermission");
+// auth -> authorization
+
 const express = require('express');
 const router=express.Router();
 
-const auth = require("../middleware/AuthMWPermission");
 
 // getAllStudents
 router.get("/", studentsController.getAllStudents);

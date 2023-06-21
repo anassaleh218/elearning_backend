@@ -7,6 +7,6 @@ if(isValid){
     nxt();
 }
 else{
-    res.status(403).send("Regestration data forbidden: not valid data")
+    res.status(403).send("Registration data forbidden: invalid data for a user");
 }
 }

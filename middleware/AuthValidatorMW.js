@@ -1,3 +1,5 @@
+// // Authentication Validator middleware for (Logging-in) 
+
 const validator = require("../util/AuthValidator");
 
 module.exports = (req,res,nxt)=>{
@@ -7,6 +9,6 @@ if(isValid){
     nxt();
 }
 else{
-    res.status(403).send("Regestration data forbidden: not valid data")
+    res.status(403).send("Logging-in data forbidden: not valid data for Logging-in")
 }
 }

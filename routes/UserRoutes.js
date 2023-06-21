@@ -7,6 +7,7 @@ const jwt = require("jsonwebtoken");
 
 
 // Regestration
+// user can't add value to isAdmin while registeration, make it manually for first admin then use admin route
 router.post("/", userValidator, async (req, res) => {
   try {
     // check if already exist

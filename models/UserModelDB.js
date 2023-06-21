@@ -28,17 +28,20 @@ const userSchema = new mongoose.Schema({
       },
     ],
   },
-  isAdmin: { type: Boolean },
   password: {
     type: String,
     minlength: 5,
   },
+  isAdmin: {
+    type: Boolean
+  }
 });
 
-// userSchema.method.genAuthToken= ()=>{
+// problem: not sign _id 
+// userSchema.method("genAuthToken",()=>{
 //   const token = jwt.sign({ userid: this._id }, process.env.JWT_SECRET, {expiresIn: "72h"});
 //   return token;
-// }
+// })
 
 // create Model
 const User = mongoose.model("Users", userSchema);
